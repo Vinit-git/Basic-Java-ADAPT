@@ -1,0 +1,63 @@
+DESCRIPTION
+Problem Statement - Find Maximum and Minimum Age
+Complete the main method to accept the age of n students and find the maximum and minimum age .
+
+The first input is the number n representing the number of age values you need to enter as integers
+
+Followed by the age values separated by space.
+
+The output should display as shown below in sample input /output.
+
+Following requirements should be taken care in the program.
+
+
+
+Input should be taken through Console
+Program should print the output as described in the Example Section below
+The number n representing the number of students should be allowed in the range of 1 to 20
+If n is entered less than 1 or more than 20 , it should print message as INVALID_INPUT.--------------------------------------------------------------------------------
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        
+        // Declare the variable
+        int a = in.nextInt();
+       
+        
+        if(a<1 || a>20){
+            System.out.println("INVALID_INPUT");
+        }
+        else{
+        int k[]=new int[a];
+        for(int i=0;i<a;i++){
+            k[i]=in.nextInt();
+        }
+        
+        int min=k[0];
+        for(int i=0;i<a;i++){    
+            if(k[i]<min)
+                min=k[i];
+        }
+        System.out.println("MIN="+min);
+        
+        int max=k[0];
+        for(int i=0;i<a;i++){
+            if(k[i]>max)
+                max=k[i];
+        }
+        System.out.println("MAX="+max);
+        // Output the variable to STDOUT
+        }
+   }
+}
