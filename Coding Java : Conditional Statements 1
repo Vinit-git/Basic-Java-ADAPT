@@ -1,0 +1,51 @@
+Complete the main method of Source class to accept marks of a student in physics,chemistry and mathematics. Calculate average marks and display the grade based on the following criteria.
+
+
+
+averageMarks>=70             DISTINCTION
+averageMarks>=60             FIRST
+averageMarks>=50             SECOND
+averageMarks>=40             THIRD
+averageMarks<40              FAIL
+Following requirements should be taken care in the program.
+
+
+
+Input should be taken through Console separated by space or new line
+Input marks as integer values.
+Program should print the output as described in the Example Section below
+If any of the marks value is lesser than zero or greater than 100 then the output should show as INVALIDMARKS--------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Source {
+    public static void main(String[] args) {
+        Scanner  sc= new Scanner(System.in);
+        int ph,ch,mh,avg;
+        ph= sc.nextInt();
+        ch= sc.nextInt();
+        mh= sc.nextInt();
+        
+        if((ph<0 || ph>100) || (ch<0 || ch>100) || (mh<0 || mh>100)){
+            System.out.println("INVALIDMARKS");
+        }
+        else{
+                avg=(ph+ch+mh)/3;
+                if(avg>=70){
+                     System.out.println("DISTINCTION");
+                }
+                else if(avg>=60){
+                       System.out.println("FIRST");
+                }
+                else if(avg>=50){
+                       System.out.println("SECOND");
+                }
+                else if(avg>=40){
+                       System.out.println("THIRD");
+                }
+                 else {
+                       System.out.println("FAIL");
+                }
+        }
+    }
+}
